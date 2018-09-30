@@ -147,7 +147,7 @@ public class ZipUtil {
                 InputStream is = zf.getInputStream(entry);
                 FileOutputStream fos = new FileOutputStream(f);
                 int count;
-                byte[] buf = new byte[8192];
+                byte[] buf = new byte[BUFFER_SIZE];
                 while ((count = is.read(buf)) != -1) {
                     fos.write(buf, 0, count);
                 }
